@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="base.css" type="text/css" media="screen" />
+</head>
+
+<body>
+<h1>H1 - Header 1</h1>
+<h2>H2 - Header 2</h2>
+<h3>H3 - Header 3</h3>
+<h4>H4 - Header 4</h4>
+<h5>H5 - Header 5</h5>
+<h6>H6 - Header 6</h6>
+ 
+<p>P - Duis a tortor. Duis et odio et leo sollicitudin consequat. Aliquam
+lobortis. Phasellus condimentum. Ut porttitor bibendum libero. Integer euismod
+lacinia velit. Donec velit justo, sodales varius, cursus sed, mattis a, arcu.
+Maecenas accumsan, sem iaculis egestas gravida, odio nunc aliquet dui, eget
+cursus diam purus vel augue. Donec eros nisi.</p>
+
+<p>P (EM, STRONG) - Neque vel ornare porttitor, <em>EM - lorem ipsum</em>
+dolor, sit amet <strong>STRONG - Condimentum dui et elit.</strong>.   in id
+velit sodales arcu iaculis venenatis. Etiam at leo. <a href="">Linked
+text</a>.</p>
+
+<p>P (ABBR, CITE) - Vitae molestie neque nunc a nunc. <abbr
+title="Abbreviation">ABBR</abbr> speicificed by the <cite>CITE - W3C</cite>.
+Donec tempor lobortis turpis. Sed tellus.</p>
+
+<p>P (SUP, SUB, VAR) - Chemical formula for caffeine is
+C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>. When you square the
+number three you add a superscripted number two: 3<sup>2</sup>. These can be
+shown by using the <var>VAR - sup</var> and <var>VAR - sub</var> tages.</p>
+
+<p>P (DEL, INS) - Ac nibh luctus viverra. In vel dolor sed nibh <del>DEL -
+sollicitudin</del><ins>INS - tincidunt</ins>. Ut consequat nisi sit amet nibh.
+Nunc mi tortor, tristique sit amet, rhoncus porta, malesuada.</p>
+
+<blockquote>BLOCKQUOTE (Q)- <q lang="en-us">Q - Et elit.  Ipsum at ipsum. Nam
+massa. Duis lorem. Donec porta.  Proin ligula.  Aenean nunc massa, dapibus
+quis, imperdiet id, commodo a, lacus.  Cras.</q></blockquote>
+
+<pre>
+PRE - Preserves spacing
+       Higher still and higher
+         From the earth thou springest
+       Like a cloud of fire;
+         The blue deep thou wingest,
+And singing still dost soar, and soaring ever singest.
+</pre>
+
+<code>
+<pre>
+// CODE element
+function Browser() {
+    var b = this;
+    b.container = $('#browser').css({
+        position: 'relative',
+        overflow: 'hidden'
+    });
+    b.imageNum = b.container.find('img').css({ 'float': 'left' }).length;
+    b.currentImage = 0;
+}
+</pre>
+</code>
+
+<address>
+ADDRESS - Used for contact information regarding the document.
+</address>
+
+<p>P - UL List to follow</p>
+<ul>
+    <li>
+        LI - Root element
+        <ul>
+            <li>LI - Subelement 1</li>
+            <li>LI - Subelement 1</li>
+            <li>LI - Subelement 1</li>
+        </ul>
+    </li>
+    <li>
+        LI - Root element
+        <ul>
+            <li>
+                LI - Subelement 1
+                <ul>
+                    <li>LI - Subelement 2</li>
+                    <li>
+                        LI - Subelement 2
+                        <ul>
+                            <li>LI - Subelement 3</li>
+                            <li>
+                                LI - Subelement 3
+                                <ul>
+                                    <li>LI - Subelement 4</li>
+                                </ul>
+                            </li>
+                            <li>
+                                LI - Subelement 3
+                                <ul>
+                                    <li>LI - Subelement 4</li>
+                                    <li>
+                                        LI - Subelement 4
+                                        <ul>
+                                            <li>LI - Subelement 5</li>
+                                        </ul>
+                                    </li>
+                                    <li>LI - Subelement 4</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>LI - Subelement 2</li>
+                    <li>LI - Subelement 2</li>
+                </ul>
+            </li>
+            <li>LI - Subelement 1</li>
+            <li>LI - Subelement 1</li>
+        </ul>
+    <li>LI - Root element</li>
+    <li>LI - Root element</li>
+</ul>
+
+<p>P - OL List to follow:</p>
+<ol>
+    <li>
+        LI - Root element
+        <ol>
+            <li>LI - Subelement 1</li>
+            <li>LI - Subelement 1</li>
+            <li>LI - Subelement 1</li>
+        </ol>
+    </li>
+    <li>
+        LI - Root element
+        <ol>
+            <li>
+                LI - Subelement 1
+                <ol>
+                    <li>LI - Subelement 2</li>
+                    <li>
+                        LI - Subelement 2
+                        <ol>
+                            <li>LI - Subelement 3</li>
+                            <li>
+                                LI - Subelement 3
+                                <ol>
+                                    <li>LI - Subelement 4</li>
+                                </ol>
+                            </li>
+                            <li>
+                                LI - Subelement 3
+                                <ol>
+                                    <li>LI - Subelement 4</li>
+                                    <li>
+                                        LI - Subelement 4
+                                        <ol>
+                                            <li>LI - Subelement 5</li>
+                                        </ol>
+                                    </li>
+                                    <li>LI - Subelement 4</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>LI - Subelement 2</li>
+                    <li>LI - Subelement 2</li>
+                </ol>
+            </li>
+            <li>LI - Subelement 1</li>
+            <li>LI - Subelement 1</li>
+        </ol>
+    <li>LI - Root element</li>
+    <li>LI - Root element</li>
+</ol>
+
+<p>P - DL list to follow:</p>
+<dl>
+    <dt>DT - Definition title 1</dt>
+    <dd>DD - Definition of item 1</dd>
+    <dt>DT - Definition title 2</dt>
+    <dd>DD - Definition of item 2</dd>
+    <dt>DT - Definition title 3</dt>
+    <dd>DD - Definition of item 3</dd>
+    <dt>DT - Definition title 4</dt>
+    <dd>DD - Definition of item 4</dd>
+</dl>
+
+<p>P - HR to follow:</p>
+<hr />
+
+<table>
+    <caption>CAPTION - Table caption</caption>
+    <thead>
+        <tr>
+            <th>TH - Table header 1</th>
+            <th>TH - Table header 2</th>
+            <th>TH - Table header 3</th>
+            <th>TH - Table header 4</th>
+            <th>TH - Table header 5</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <td>TD - Table footer 1</td>
+            <td>TD - Table footer 2</td>
+            <td>TD - Table footer 3</td>
+            <td>TD - Table footer 4</td>
+            <td>TD - Table footer 5</td>
+        </tr>
+    </tfoot>
+    <tbody>
+        <tr>
+            <td>TD - Table body 1</td>
+            <td>TD - Table body 2</td>
+            <td>TD - Table body 3</td>
+            <td>TD - Table body 4</td>
+            <td>TD - Table body 5</td>
+        </tr>
+        <tr>
+            <td>TD - Table body 1</td>
+            <td>TD - Table body 2</td>
+            <td>TD - Table body 3</td>
+            <td>TD - Table body 4</td>
+            <td>TD - Table body 5</td>
+        </tr>
+        <tr>
+            <td>TD - Table body 1</td>
+            <td>TD - Table body 2</td>
+            <td>TD - Table body 3</td>
+            <td>TD - Table body 4</td>
+            <td>TD - Table body 5</td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td>TD - Table body 1</td>
+            <td>TD - Table body 2</td>
+            <td>TD - Table body 3</td>
+            <td>TD - Table body 4</td>
+            <td>TD - Table body 5</td>
+        </tr>
+        <tr>
+            <td>TD - Table body 1</td>
+            <td>TD - Table body 2</td>
+            <td>TD - Table body 3</td>
+            <td>TD - Table body 4</td>
+            <td>TD - Table body 5</td>
+        </tr>
+        <tr>
+            <td>TD - Table body 1</td>
+            <td>TD - Table body 2</td>
+            <td>TD - Table body 3</td>
+            <td>TD - Table body 4</td>
+            <td>TD - Table body 5</td>
+        </tr>
+    </tbody>
+</table>
+
+<form>
+    <fieldset>
+        <legend>LEGEND - Fieldset 1</legend>
+        <div>
+            <label for="text">LABEL - Input (Text)</label>
+            <input type="text" name="text" />
+        </div>
+        <div>
+            <label><input type="radio" name="radio" /> LABEL - Input (Radio) 1</label>
+            <label><input type="radio" name="radio" /> LABEL - Input (Radio) 2</label>
+            <label><input type="radio" name="radio" /> LABEL - Input (Radio) 3</label>
+        </div>
+        <div>
+            <label><input type="checkbox" name="" /> LABEL - Input (Checkbox) 1</label>
+            <label><input type="checkbox" name="" /> LABEL - Input (Checkbox) 2</label>
+            <label><input type="checkbox" name="" /> LABEL - Input (Checkbox) 3</label>
+        </div>
+        <div>
+            <label>LABEL - Select</label>
+            <select name="" />
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+        </div>
+        <div>
+            <label>LABEL - Multiple Select</label>
+            <select multiple="multiple" name="" />
+                <option>Multiple Selection</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+        </div>
+        <div>
+            <label>LABEL - Textarea</label>
+            <textarea></textarea>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>LEGEND - Fieldset 2</legend>
+        <div>
+            <button>BUTTON</button>
+            <input type="submit" value="SUBMIT" />
+        </div>
+        <div>
+            <select name="" />
+                <optgroup label="Option Group 1">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                </optgroup>
+                <optgroup label="Option Group 2">
+                    <option>Option 1</option>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                </optgroup>
+                <optgroup label="Option Group 3">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                </optgroup>
+            </select>
+        </div>
+    </fieldset>
+</form>
+</body>
+</html>

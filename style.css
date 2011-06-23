@@ -1,0 +1,122 @@
+/*
+Theme Name: EK Blank
+Theme URI: http://elikirk.com
+Description: A blank theme for use in theme development
+Version: 1.1
+Author: Chris Rock
+Tags: empty, clean, development, design
+
+	Based on WP Blank
+*/
+@import url("base.css");
+
+/* -- just some ugly styling to make it easier to get started, can safely be removed */
+.sidebar, .entry-meta-single {
+    border:2px dotted gray;
+}
+.comments {
+    border:2px dotted yellow;
+}
+.footer, .header {
+    border:2px dotted blue;
+}
+li.depth-1 {
+    border: 2px dotted orange;
+}
+.navigation {
+    border:2px dotted black;
+}
+.post {
+    border:2px dotted pink;
+}
+
+/* -- MAIN DIV'S -------------------------------------------------------------------- */
+.wrapper {
+    float:none;
+    clear:both;
+    margin:0 auto;
+    padding:0;
+    width:960px;
+}
+.header {
+    height:150px;
+    margin:0 auto;
+    text-align:center;
+    padding: 20px 0;
+}
+.footer {
+    height:50px;
+    overflow:hidden;
+    margin:20px auto 0;
+    clear:both;
+    float:none;
+    text-align:center;
+    padding: 20px 0;
+}
+
+/* -- POSTS -------------------------------------------------------------------------- */
+.post-index {
+    margin:0 0 10px;
+}
+.post-single {
+    margin:0 0 20px;
+}
+.main {
+    float:right;
+    clear:none;
+    width:640px;
+}
+
+/* -- SIDEBARS ----------------------------------------------------------------------- */
+.sidebar {
+    margin:0 auto;
+    overflow:hidden;
+    float:left;
+    clear:none;
+    width:300px;
+}
+
+
+/* -- 404-PAGE ----------------------------------------------------------------------- */
+.error404 {margin:0;width:100%;}
+.error404 h1,.error404 h2 {margin: 10px auto;}
+
+/* -- COMMENTS ----------------------------------------------------------------------- */
+div.comments-wrap {
+    margin:15px auto;
+    padding:0;
+}
+li.comment, li.trackback, li.pingback {
+    margin: 10px auto;
+}
+ul.children {
+    margin-left:10px;
+}
+ul.commentlist, ul.pinglist {
+    margin:10px 0;
+}
+textarea#comment {
+    overflow:auto;
+}
+
+/* -- NAVIGATION --------------------------------------------------------------------- */
+div.navigation {
+    height:25px;
+    overflow:auto;
+    float:none;
+    clear:both;
+    margin:0 auto;
+}
+* +html div.navigation {overflow:visible} /* IE hack to prevent scrollbars on the .navigation div... */
+.nav-next {
+    float:right;
+    clear:none;
+    width:48%;
+    text-align:right;
+}
+.nav-prev {
+    float:left;
+    clear:none;
+    width:48%;
+    text-align:left;
+}
