@@ -11,7 +11,6 @@
                 <h2 class="entry-title entry-title-single"><?php the_title(); ?></h2>
                 <div class="entry-content entry-content-single">
                     <?php the_content( __('<p class="serif">Read the rest of this entry &raquo;</p>')); ?>
-                    <?php //wp_link_pages(array('before' => ''. _e('<strong>Pages:</strong>', 'blank') .'', 'after' => '', 'next_or_number' => 'number')); ?>
                     <?php wp_link_pages( __('before=<p>Pages: &after=</p>')); ?>
                 </div>
                 <div class="entry-meta entry-meta-single">
