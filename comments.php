@@ -5,7 +5,7 @@ if(!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['S
 <?php if(!empty($post->post_password)): ?>
     <?php if($_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password): ?>
         <p class="nocomments">
-            <?php _e('This post is password protected. Enter the password to view comments', 'blank') ?>.
+            This post is password protected. Enter the password to view comments
         </p>
         <?php return; ?>
     <?php endif; ?>

@@ -16,37 +16,30 @@
                         </a>
                     </p>
                     <div class="caption">
-                        <?php if ( !empty($post->post_excerpt) ) the_excerpt(); // this is the "caption" ?>
+                        <?php if(!empty($post->post_excerpt)) the_excerpt(); // this is the "caption" ?>
                     </div>
-                    <?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
+                    <?php the_content(); ?>
                     <div class="navigation">
                         <div class="alignleft"><?php previous_image_link() ?></div>
                         <div class="alignright"><?php next_image_link() ?></div>
                     </div>
                     <div class="entry-meta" id="entry-meta-attach">
-                        <?php the_tags( __('Tags ', 'blank'), ", ", " " ) ?>
-                        <?php _e('This attachment was posted', 'blank'); ?>
-                        <?php the_time('l, F j, Y') ?> <?php _e('at ', 'blank'); ?> <?php the_time() ?>	
+                        <?php the_tags('Tags: ', ", ", " " ) ?>
+                        This attachment was posted <?php the_time('l, F j, Y') ?> at <?php the_time() ?>	
                         <?php if (('open' == $post-> comment_status) && ('open' == $post->ping_status)): ?>
-                            <!-- Both Comments and Pings are open -->
-                            <?php _e('You can ', 'blank'); ?>
-                            <a href="#respond"><?php _e('leave a response ', 'blank'); ?></a>
-                            <?php _e('or', 'blank'); ?>
+                            You can <a href="#respond">leave a response</a> or
                             <a href="<?php trackback_url(); ?>" rel="trackback">trackback</a>
-                            <?php _e('from your own site', 'blank'); ?>.
+                            from your own site.
                         <?php elseif (!('open' == $post-> comment_status) && ('open' == $post->ping_status)): ?>
-                            <!-- Only Pings are Open -->
-                            <?php _e('Responses are currently closed, but you can', 'blank'); ?> 
+                            Responses are currently closed, but you can
                             <a href="<?php trackback_url(); ?> " rel="trackback">trackback</a> 
-                            <?php _e('from your own site', 'blank'); ?>.
+                            from your own site.
                         <?php elseif (('open' == $post-> comment_status) && !('open' == $post->ping_status)): ?>
-                            <!-- Comments are open, Pings are not -->
-                            <?php _e(' You can skip to the end and leave a response. Pinging is currently not allowed.', 'blank'); ?>
+                            You can skip to the end and leave a response. Pinging is currently not allowed.
                         <?php elseif (!('open' == $post-> comment_status) && !('open' == $post->ping_status)): ?>
-                            <!-- Neither Comments, nor Pings are open -->
-                            <?php _e('Both comments and pings are currently closed.', 'blank'); ?>
+                            Both comments and pings are currently closed.
                         <?php endif; ?>
-                        <?php edit_post_link( __('Edit'), ' | ', ''); ?>
+                        <?php edit_post_link('Edit', ' | ', ''); ?>
                     </div>
                 </div>
                 <?php comments_template(); ?>

@@ -3,28 +3,24 @@
 <head>
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 <title>
-    <?php 
-    if (is_home()) {
-        echo bloginfo('name');
-    } elseif (is_category()) {
-        echo __('Category &raquo; ', 'blank'); wp_title('&laquo; - ', TRUE, 'right');
-        echo bloginfo('name');
-    } elseif (is_tag()) {
-        echo __('Tag &raquo; ', 'blank'); wp_title('&laquo; - ', TRUE, 'right');
-        echo bloginfo('name');
-    } elseif (is_search()) {
-        echo __('Search results &raquo; ', 'blank');
-        echo the_search_query();
-        echo '&laquo; - ';
-        echo bloginfo('name');
-    } elseif (is_404()) {
-        echo '404 '; wp_title(' - ', TRUE, 'right');
-        echo bloginfo('name');
-    } else {
-        echo wp_title(' - ', TRUE, 'right');
-        echo bloginfo('name');
-    }
-    ?>
+    <?php if(is_home()): ?>
+        <?php bloginfo('name'); ?>
+    <?php elseif(is_category()): ?>
+        Category &raquo; <?php wp_title('&laquo; - ', TRUE, 'right'); ?>
+        <?php bloginfo('name'); ?>
+    <?php elseif(is_tag()): ?>
+        Tag &raquo; <?php wp_title('&laquo; - ', TRUE, 'right'); ?>
+        <?php bloginfo('name'); ?>
+    <?php elseif(is_search()): ?>
+        Search results &raquo; <?php the_search_query(); ?> &laquo; - 
+        <?php bloginfo('name'); ?>
+    <?php elseif (is_404()): ?>
+        404 <?php wp_title(' - ', TRUE, 'right'); ?>
+        <?php bloginfo('name'); ?>
+    <?php else: ?>
+        <?php wp_title(' - ', TRUE, 'right'); ?>
+        <?php bloginfo('name'); ?>
+    <?php endif; ?>
 </title>
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />

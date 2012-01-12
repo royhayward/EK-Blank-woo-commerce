@@ -11,26 +11,26 @@
                 </h2>
 				<div class="additional-meta"><?php the_time('l, j F, Y') ?></div>
                 <div class="entry-content entry-content-index">
-                    <?php the_content( __('Read the rest of this entry &raquo;', 'blank')); ?>
+                    <?php the_content(); ?>
                 </div>
                 <div class="entry-meta entry-meta-index">
-                    <?php the_tags( __('Tags: ', 'blank'), ", ", " ") ?>
-                    <?php _e('Category: ', 'blank'); ?><?php the_category(', ') ?>
-                    <?php comments_popup_link( __( 'Comments (0)', 'blank' ), __( 'Comments (1)', 'blank' ), __( 'Comments (%)', 'blank' ), 'comments-link', __('Comments closed', 'blank')); ?>
-                    <?php edit_post_link( __('Edit'), ' | ', ''); ?>
+                    <?php the_tags('Tags: ',',',' ') ?>
+                    Category: <?php the_category(', ') ?>
+                    <?php comments_popup_link('Comments (0)', 'Comments (1)', 'Comments (%)', 'comments-link', 'Comments closed'); ?>
+                    <?php edit_post_link('Edit', ' | ', ''); ?>
                 </div>
             </div>
         <?php endwhile; ?>
 		<div class="navigation navigation-index">
-			<div class="nav-prev"><?php next_posts_link( __('&laquo; Older Entries', 'blank')) ?></div>
-			<div class="nav-next"><?php previous_posts_link( __('Newer Entries &raquo;', 'blank')) ?></div>
+			<div class="nav-prev"><?php next_posts_link('&laquo; Older Entries') ?></div>
+			<div class="nav-next"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
 		</div>
     </div>
 <?php else : ?>
     <div class="main">
-        <h2><?php _e('The page you`re looking for doesn`t exist', 'blank'); ?></h2>
+        <h2>The page you`re looking for doesn't exist</h2>
 		<div class="search-404">
-            <?php _e('Do you want to search for it?', 'blank'); ?><br />
+            Do you want to search for it?<br />
             <?php include (TEMPLATEPATH . "/searchform.php"); ?>
 		</div>
      </div>
