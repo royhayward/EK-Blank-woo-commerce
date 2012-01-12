@@ -26,19 +26,6 @@
                     <div class="entry-meta" id="entry-meta-attach">
                         <?php the_tags('Tags: ', ", ", " " ) ?>
                         This attachment was posted <?php the_time('l, F j, Y') ?> at <?php the_time() ?>	
-                        <?php if (('open' == $post-> comment_status) && ('open' == $post->ping_status)): ?>
-                            You can <a href="#respond">leave a response</a> or
-                            <a href="<?php trackback_url(); ?>" rel="trackback">trackback</a>
-                            from your own site.
-                        <?php elseif (!('open' == $post-> comment_status) && ('open' == $post->ping_status)): ?>
-                            Responses are currently closed, but you can
-                            <a href="<?php trackback_url(); ?> " rel="trackback">trackback</a> 
-                            from your own site.
-                        <?php elseif (('open' == $post-> comment_status) && !('open' == $post->ping_status)): ?>
-                            You can skip to the end and leave a response. Pinging is currently not allowed.
-                        <?php elseif (!('open' == $post-> comment_status) && !('open' == $post->ping_status)): ?>
-                            Both comments and pings are currently closed.
-                        <?php endif; ?>
                         <?php edit_post_link('Edit', ' | ', ''); ?>
                     </div>
                 </div>

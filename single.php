@@ -17,19 +17,6 @@
                     Category: <?php the_category(', ') ?> <br />
                     This entry was posted <?php the_time('l, j F, Y') ?> at <?php the_time() ?><br />
                     You can follow any responses to this entry via <?php post_comments_feed_link('RSS'); ?>.<br />
-                    <?php if (('open' == $post-> comment_status) && ('open' == $post->ping_status)): ?>
-                        You can <a href="#comments">leave a comment</a> or
-                        <a href="<?php trackback_url(); ?>" rel="trackback">trackback</a>
-                        from your own site.
-                    <?php elseif (!('open' == $post-> comment_status) && ('open' == $post->ping_status)): ?>
-                        Comments are currently closed, but you can
-                        <a href="<?php trackback_url(); ?> " rel="trackback">trackback</a>
-                        from your own site.
-                    <?php elseif (('open' == $post-> comment_status) && !('open' == $post->ping_status)): ?>
-                        You can skip to the end to leave a comment. Trackbacks are currently not allowed.
-                    <?php elseif (!('open' == $post-> comment_status) && !('open' == $post->ping_status)): ?>
-                        Both comments and trackbacks are currently closed.
-                    <?php endif; ?>
                     <?php edit_post_link('Edit', ' | ', ''); ?>
                 </div>
             </div>
