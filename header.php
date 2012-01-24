@@ -31,7 +31,7 @@
 <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
 <div class="wrapper"> <!-- wrapper, ends in footer.php -->
     <div class="header">
         <h1>
