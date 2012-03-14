@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 <title>
-    <?php if(is_home()): ?>
+    <?php if(is_home() || is_front_page()): ?>
         <?php bloginfo('name'); ?>
     <?php elseif(is_category()): ?>
         Category &raquo; <?php wp_title('&laquo; - ', TRUE, 'right'); ?>
@@ -34,10 +34,16 @@
 <body <?php body_class(); ?>>
 <div class="wrapper"> <!-- wrapper, ends in footer.php -->
     <div class="header">
-        <h1>
+        <?php if(is_front_page()): ?>
+            <h1>
+                <a href="<?php echo get_option('home'); ?>">
+                    <?php bloginfo('name'); ?>
+                </a>
+            </h1>
+        <?php else: ?>
             <a href="<?php echo get_option('home'); ?>">
                 <?php bloginfo('name'); ?>
             </a>
-        </h1>
+        <?php endif; ?>
         <h2><?php bloginfo('description'); ?></h2>
     </div>

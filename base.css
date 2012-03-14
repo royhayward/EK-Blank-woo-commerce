@@ -51,7 +51,7 @@ a:link {color: #000;}
 a:visited {text-decoration: none;}
 a:hover {text-decoration: underline;}
 a:focus {text-decoration: none;}
-a:focus,:focus {outline: 1px dotted #000;}
+a:focus {outline: 1px dotted #000;}
 a:active {outline: none;}
 
 /* margin and padding values are reset for all these elements */
