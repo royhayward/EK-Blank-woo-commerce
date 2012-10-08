@@ -76,23 +76,18 @@ li.depth-1 {
     width:300px;
 }
 
-
-/* -- 404-PAGE ----------------------------------------------------------------------- */
-.error404 {margin:0;width:100%;}
-.error404 h1,.error404 h2 {margin: 10px auto;}
-
 /* -- COMMENTS ----------------------------------------------------------------------- */
 div.comments-wrap {
     margin:15px auto;
     padding:0;
 }
-li.comment, li.trackback, li.pingback {
+li.comment {
     margin: 10px auto;
 }
 ul.children {
     margin-left:10px;
 }
-ul.commentlist, ul.pinglist {
+ul.commentlist {
     margin:10px 0;
 }
 textarea#comment {
