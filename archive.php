@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 <div class="main"> 
-    <?php if(have_posts()) : ?>
+    <?php if(have_posts()): ?>
         <?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
-        <h2 class="archive-title">
+        <h2>
             <?php if(is_category()): ?>
                 Category "<?php single_cat_title(); ?>"
             <?php elseif(is_tag()): ?>
@@ -19,36 +19,40 @@
                 Blog archives
             <?php endif; ?>
         </h2>
-        <?php while(have_posts()): ?>
-            <?php the_post(); ?>
-            <div class="post post-index post-<?php the_ID(); ?>">
-                <h3 class="entry-title index-entry-title">
-                    <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
-                        <?php the_title(); ?>
-                    </a>
+        <?php while(have_posts()): the_post(); ?>
+            <div class="post">
+                <h3>
+                    <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
                 </h3>
-                <div class="additional-meta"><?php the_time('l, j F, Y') ?></div>
-                <div class="entry-content entry-content-index">
+                <div class="date"><?php the_time('l, j F, Y') ?></div>
+                <div class="content">
                     <?php the_content(); ?>
                 </div>
-                <div class="entry-meta entry-meta-index">
+                <div class="meta">
                     <?php the_tags('Tags: ',',',' ') ?>
                     Category: <?php the_category(', ') ?>
-                    <?php comments_popup_link('Comments (0)', 'Comments (1)', 'Comments (%)', 'comments-link', 'Comments closed'); ?>
-                    <?php edit_post_link('Edit', ' | ', ''); ?>
+                    <?php comments_popup_link(
+                        'Comments (0)',
+                        'Comments (1)',
+                        'Comments (%)',
+                        'comments-link',
+                        'Comments closed'
+                    ); ?>
                 </div>
             </div>
         <?php endwhile; ?>
         <div class="navigation">
-            <div class="nav-prev"><?php next_posts_link('&laquo; Older Entries') ?></div>
-            <div class="nav-next"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
+            <div class="nav-prev">
+                <?php next_posts_link('&laquo; Older Entries') ?>
+            </div>
+            <div class="nav-next">
+                <?php previous_posts_link('Newer Entries &raquo;') ?>
+            </div>
         </div>
-    <?php else : ?>
-        <h2>The page you`re looking for doesn't exist</h2>
-        <div class="search-404">
-            Do you want to search for it?<br />
-            <?php include (TEMPLATEPATH . "/searchform.php"); ?>
-        </div>
+    <?php else: ?>
+        <h2>There were no results that matched your request</h2>
+        <p>Do you want to search for it?</p>
+        <?php include (TEMPLATEPATH . "/searchform.php"); ?>
     <?php endif; ?>
  </div>
 <?php get_sidebar(); ?>
