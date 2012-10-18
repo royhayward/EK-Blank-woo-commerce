@@ -14,7 +14,7 @@ if(!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['S
     <?php if (have_comments()): ?>
         <?php comment_form(); ?>
         <?php wp_list_comments(); ?>
-        <div class="navigation comment-nav"> 
+        <div class="navigation"> 
             <div class="nav-prev"><?php previous_comments_link() ?></div>
             <div class="nav-next"><?php next_comments_link() ?></div>
         </div>

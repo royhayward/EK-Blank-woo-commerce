@@ -11,17 +11,14 @@ Tags: empty, clean, development, design
 @import url("base.css");
 
 /* -- just some ugly styling to make it easier to get started, can safely be removed */
-.sidebar, .entry-meta-single {
+footer, header {
+    border:2px dotted blue;
+}
+.sidebar {
     border:2px dotted gray;
 }
 .comments {
     border:2px dotted yellow;
-}
-.footer, .header {
-    border:2px dotted blue;
-}
-li.depth-1 {
-    border: 2px dotted orange;
 }
 .navigation {
     border:2px dotted black;
@@ -30,21 +27,20 @@ li.depth-1 {
     border:2px dotted pink;
 }
 
-/* -- MAIN DIV'S -------------------------------------------------------------------- */
-.wrapper {
+.container {
     float:none;
     clear:both;
     margin:0 auto;
     padding:0;
     width:960px;
 }
-.header {
+header {
     height:150px;
     margin:0 auto;
     text-align:center;
     padding: 20px 0;
 }
-.footer {
+footer {
     height:50px;
     overflow:hidden;
     margin:20px auto 0;
@@ -53,65 +49,15 @@ li.depth-1 {
     text-align:center;
     padding: 20px 0;
 }
-
-/* -- POSTS -------------------------------------------------------------------------- */
-.post-index {
-    margin:0 0 10px;
-}
-.post-single {
-    margin:0 0 20px;
-}
 .main {
     float:right;
     clear:none;
     width:640px;
 }
-
-/* -- SIDEBARS ----------------------------------------------------------------------- */
 .sidebar {
     margin:0 auto;
     overflow:hidden;
     float:left;
     clear:none;
     width:300px;
-}
-
-/* -- COMMENTS ----------------------------------------------------------------------- */
-div.comments-wrap {
-    margin:15px auto;
-    padding:0;
-}
-li.comment {
-    margin: 10px auto;
-}
-ul.children {
-    margin-left:10px;
-}
-ul.commentlist {
-    margin:10px 0;
-}
-textarea#comment {
-    overflow:auto;
-}
-
-/* -- NAVIGATION --------------------------------------------------------------------- */
-div.navigation {
-    height:25px;
-    overflow:auto;
-    float:none;
-    clear:both;
-    margin:0 auto;
-}
-* +html div.navigation {overflow:visible} /* IE hack to prevent scrollbars on the .navigation div... */
-.nav-next {
-    float:right;
-    clear:none;
-    width:48%;
-    text-align:right;
-}
-.nav-prev {
-    float:left;
-    clear:none;
-    width:48%;
-    text-align:left;
 }

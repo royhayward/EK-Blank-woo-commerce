@@ -3,24 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 <title>
-    <?php if(is_home() || is_front_page()): ?>
-        <?php bloginfo('name'); ?>
-    <?php elseif(is_category()): ?>
-        Category &raquo; <?php wp_title('&laquo; - ', TRUE, 'right'); ?>
-        <?php bloginfo('name'); ?>
-    <?php elseif(is_tag()): ?>
-        Tag &raquo; <?php wp_title('&laquo; - ', TRUE, 'right'); ?>
-        <?php bloginfo('name'); ?>
-    <?php elseif(is_search()): ?>
-        Search results &raquo; <?php the_search_query(); ?> &laquo; - 
-        <?php bloginfo('name'); ?>
-    <?php elseif (is_404()): ?>
-        404 <?php wp_title(' - ', TRUE, 'right'); ?>
-        <?php bloginfo('name'); ?>
-    <?php else: ?>
-        <?php wp_title(' - ', TRUE, 'right'); ?>
-        <?php bloginfo('name'); ?>
-    <?php endif; ?>
+    <?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?>
 </title>
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
@@ -32,8 +15,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div class="wrapper"> <!-- wrapper, ends in footer.php -->
-    <div class="header">
+<div class="container"> <!-- container, ends in footer.php -->
+    <header>
         <?php if(is_front_page()): ?>
             <h1>
                 <a href="<?php echo get_option('home'); ?>">
@@ -46,4 +29,4 @@
             </a>
         <?php endif; ?>
         <h2><?php bloginfo('description'); ?></h2>
-    </div>
+    </header>

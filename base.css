@@ -41,19 +41,6 @@ h4 {font-size: 20px;}
 h5 {font-size: 18px;}
 h6 {font-size: 16px;}
 
-/* styling for links and visited links as well as for links in a hovered, focus and active state 
- * make sure to keep these rules in that order, with :active being last
- * a:focus and :focus are used to help keyboard users, you may change their styling, but make sure to give users a visual clue of the element's state.
- * outline:none used with the pseudo-class :active is to avoid the sticky outline when a user clicks on a link, but choose to not follow it
- * note that the last rule does not do anything in IE as this browser does not support "outline" (besides, it treats :active and :focus the same)
- */
-a:link {color: #000;}
-a:visited {text-decoration: none;}
-a:hover {text-decoration: underline;}
-a:focus {text-decoration: none;}
-a:focus {outline: 1px dotted #000;}
-a:active {outline: none;}
-
 /* margin and padding values are reset for all these elements */
 body, p, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,
 pre, code, form, fieldset, legend, input, button, textarea,
