@@ -10,29 +10,22 @@
                 <div class="content">
                     <?php the_content(); ?>
                 </div>
-                <div class="meta">
-                    <?php the_tags('Tags: ',',',' ') ?>
-                    Category: <?php the_category(', ') ?>
-                    <?php comments_popup_link(
-                        'Comments (0)',
-                        'Comments (1)',
-                        'Comments (%)',
-                        'comments-link',
-                        'Comments closed'
-                    ); ?>
-                </div>
             </div>
         <?php endwhile; ?>
 		<div class="navigation">
-			<div class="nav-prev"><?php next_posts_link('&laquo; Older Entries') ?></div>
-			<div class="nav-next"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
+			<div class="nav-prev">
+				<?php next_posts_link('&laquo; Older Entries') ?>
+			</div>
+			<div class="nav-next">
+				<?php previous_posts_link('Newer Entries &raquo;') ?>
+			</div>
 		</div>
     </div>
 <?php else: ?>
     <div class="main">
         <h2>There were no results that matched your request</h2>
         <p>Do you want to search for it?</p>
-        <?php include (TEMPLATEPATH . "/searchform.php"); ?>
+        <?php get_search_form(); ?>
      </div>
 <?php endif; ?>
 <?php get_sidebar(); ?>

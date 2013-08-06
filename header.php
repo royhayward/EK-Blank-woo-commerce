@@ -28,5 +28,4 @@
                 <?php bloginfo('name'); ?>
             </a>
         <?php endif; ?>
-        <h2><?php bloginfo('description'); ?></h2>
     </header>

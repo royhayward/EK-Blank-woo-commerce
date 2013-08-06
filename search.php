@@ -30,7 +30,7 @@
 		</div>
 	<?php else : ?>
 		<h2>Nothing found. Try a different search?</h2>
-		<?php include (TEMPLATEPATH . '/searchform.php'); ?>
+		<?php get_search_form(); ?>
 	<?php endif; ?>
 </div>
 <?php get_sidebar(); ?>

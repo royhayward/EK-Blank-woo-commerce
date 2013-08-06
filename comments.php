@@ -11,7 +11,7 @@ if(!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['S
     <?php endif; ?>
 <?php endif; ?>
 <div id="comments">
-    <?php if (have_comments()): ?>
+    <?php if(have_comments()): ?>
         <?php comment_form(); ?>
         <?php wp_list_comments(); ?>
         <div class="navigation"> 
